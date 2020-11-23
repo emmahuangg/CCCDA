@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Canada-China Cultural Development Association: 2020 Events</title>
+<link rel="stylesheet" href="CSS/events2020.css">
+<script type="text/javascript" src="Script/jquery-3.5.1.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+<body>
+  <div id="windowSizeAlert">
+    <center><h5>Please resize your window for a better viewing experience</h5>
+      <h5>&#9660;</h5>
+    <button id="button1" onclick="newWindow1()">Click here to open up a window that is more suitable for this website.</button>
+    <button id="button2" onclick="newWindow2()">Click here to open up a window that is more suitable for this website.</button></center>
+  </div>
+  <script>
+    function newWindow1() {
+      myWindow = window.open(window.location.href, "", "width=" + (window.screen.height*1.8) + ", height=" + window.screen.height);
+      close();
+    }
+    function newWindow2() {
+      myWindow = window.open(window.location.href, "", "width=" + window.screen.width + ", height=" + (window.screen.width/1.8));
+      close();
+    }
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    if ((w/h) > 2.73) {
+      $("#windowSizeAlert").css("display","block");
+      $("#button1").css("display","block");
+    }
+    if ((w/h) < 1.56) {
+      $("#windowSizeAlert").css("display","block");
+      $("#button2").css("display","block");
+    }
+    $(window).on('resize', function(){
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+      if ((w/h) > 2.73) {
+        $("#windowSizeAlert").css("display","block");
+        $("#button1").css("display","block");
+        $("#button2").css("display","none");
+      }
+      if ((w/h) < 1.56) {
+        $("#windowSizeAlert").css("display","block");
+        $("#button2").css("display","block");
+        $("#button1").css("display","none");
+      }
+      if ((w/h) >1.56 && (w/h)<2.73) {
+        $("#windowSizeAlert").css("display","none");
+        $("#button1").css("display","none");
+        $("#button2").css("display","none");
+      }
+    });
+  </script>
+  <div id="header">
+    <a href="index.html"><div id="headerCompanyLogo">
+      <img id="logoRed" src="Images/logoRed.png">
+      <img id="logoWhite" src="Images/logoWhite.png">
+    </div></a>
+    <div id="headerCompanyName">
+      <span>C</span>
+      <span>C</span>
+      <span>C</span>
+      <span>D</span>
+      <span>A</span>
+    </div>
+    <a href="index.html"><div id="headerHome">Home</div></a>
+    <div id="headerEducationdropdown">
+        <a href="education.html"><div id="headerEducation">Education</div></a>
+        <div id="headerEducationContent">
+          <div><a href="educationSymphony.html">Symphony Orchestra</a></div>
+          <div><a href="educationPiano.html">Piano & Teaching</a></div>
+          <div><a href="educationChoir.html">CICF & Choir</a></div>
+          <div><a href="educationArts.html">Dance, Art & Drama</a></div>
+        </div>
+    </div>
+    <div id="headerEventsdropdown">
+        <a href="events.html"><div id="headerEvents">Events</div></a>
+        <div id="headerEventsContent">
+          <div><a href="events2020.html">2020 Events</a></div>
+          <div><a href="pastevents.html">Past Events</a></div>
+        </div>
+    </div>
+    <div id="headerAboutdropdown">
+        <a href="about.html"><div id="headerAbout">About</div></a>
+        <div id="headerAboutContent">
+          <div><a href="about.html#whatWeDo1">What We Do</a></div>
+          <div><a href="about.html#history1">History</a></div>
+          <div><a href="about.html#board1">Board & Staff</a></div>
+          <div><a href="about.html#reviews1">Reviews</a></div>
+        </div>
+    </div>
+    <script>
+      $("#sidebarcontainer").css("height",document.height);
+      $("#headerEventsdropdown").mouseenter(function(){
+        $("#headerEventsContent").show(200);
+      })
+      $("#headerEventsdropdown").mouseleave(function(){
+        $("#headerEventsContent").hide(200);
+      })
+      $("#headerAboutdropdown").mouseenter(function(){
+        $("#headerAboutContent").show(200);
+      })
+      $("#headerAboutdropdown").mouseleave(function(){
+        $("#headerAboutContent").hide(200);
+      })
+      $("#headerEducationdropdown").mouseenter(function(){
+        $("#headerEducationContent").show(200);
+      })
+      $("#headerEducationdropdown").mouseleave(function(){
+        $("#headerEducationContent").hide(200);
+      })
+    </script>
+    <a href="contact.html"><div id="headerContactUs">Contact Us</div></a>
+  </div>
+  <div id="events2020Intro">
+    <img src="Images/myDreamYellowButterflies.jpg">
+    <center><div id="events2020IntroEvents">2020 Events</div>
+    <div id="intro">
+      <h4 id="events2020IntroClickhere">click here to continue</h4>
+      <h4 id="events2020IntroButton">&#9661;</h4></center>
+    </div>
+    <script>
+      $(document).ready(function(){
+        setTimeout(function() {
+          $("#events2020IntroEvents").animate({
+            opacity: "1"
+          });
+        }, 400);
+        setTimeout(function() {
+          $("#events2020IntroClickhere, #events2020IntroButton").animate({
+            opacity: "1"
+          });
+        }, 800);
+      });
+      $("#events2020IntroButton").click(function(){
+        var windowHeight = $(window).height();
+        $("#photoContainer").css('display','block');
+        $("#desc2").css('display','block');
+        $("#newYearsConcertDescription").css('display','block');
+        $("#calendardiv").css('display','block');
+        $("#pasteventsBtn").css('display','block');
+        $("#footer").css('display','block');
+        $([document.documentElement, document.body]).animate({
+          scrollTop: ($("#photoContainer").offset().top - windowHeight*0.2)
+        }, 2000);
+      });
+    </script>
+  </div>
+  <center><div id="photoContainer">
+    <h5 id="photoContainerText">2020 Chinese New Year Concert</h5>
+    <img id="photo1" src="Images/newYearsConcertSeveralMusiciansGroup.jpg">
+    <img id="photo2" src="Images/newYears2020ConductorLinDaYe.jpg">
+    <img id="photo3" src="Images/newYears2020ErhuGaoShaoQing.jpg">
+    <img id="photo4" src="Images/newYears2020PianistZhangHaoChen.jpg">
+    <img id="photo5" src="Images/newYears2020PipaMiaoXiaoZhen.jpg">
+    <img id="photo6" src="Images/newYearsConcertEnding.jpg">
+    <img id="photo7" src="Images/newYearsConcertViolinists.jpg">
+    <img id="photo8" src="Images/maleMusicianSuona.jpg">
+    <img id="photo9" src="Images/newYearsConcertCellists.jpg">
+    <script>
+      $("#photo1").mouseenter(function(){
+        $("#photoContainerText").html("Musicians at the 2020 Chinese New Year Concert");
+      });
+      $("#photoContainer").mouseleave(function(){
+        $("#photoContainerText").html("2020 Chinese New Year Concert");
+      });
+      $("#photo2").mouseenter(function(){
+        $("#photoContainerText").html("Conductor Lin Da Ye");
+      });
+      $("#photo3").mouseenter(function(){
+        $("#photoContainerText").html("Erhu Soloist Gao Shao Qing");
+      });
+      $("#photo4").mouseenter(function(){
+        $("#photoContainerText").html("Pianist Zhang Hao Chen");
+      });
+      $("#photo5").mouseenter(function(){
+        $("#photoContainerText").html("Pipa Soloist Miao Xiao Zhen");
+      });
+      $("#photo6").mouseenter(function(){
+        $("#photoContainerText").html("2020 Chinese New Year Concert Ending");
+      });
+      $("#photo7").mouseenter(function(){
+        $("#photoContainerText").html("Violinists at the 2020 Chinese New Year Concert");
+      });
+      $("#photo8").mouseenter(function(){
+        $("#photoContainerText").html("Suona Soloist");
+      });
+      $("#photo9").mouseenter(function(){
+        $("#photoContainerText").html("Cellists at the 2020 Chinese New Year Concert");
+      });
+    </script>
+  </div></center>
+  <div id="newYearsConcertDescription">
+    <h3>2020 Chinese New Year Concert</h3>
+    <p>The 2020 Chinese New Year Concert is an unforgettable celebration and a unique experience of Chinese music and western classic music for music lovers of all ages.  The concert on January 19, 2020 is led by Chief Conductor Lin Daye and features the youngest Gold Medal Winner of the Van Cliburn International Piano Competition, Chinese pianist Zhang Haochen, with one of the finest national symphony orchestra –The Shenzhen Symphony Orchestra (SSO).
+  <br><br>
+  The Concert is designed to enrich the cultural exchange between East and West and to bring China's best musicians on to the Canadian stages.  Audiences can immerse themselves in new soundscapes and broaden their musical horizons with an incomparable taste of music.
+  </p>
+        <div class="slideshowContainer">
+          <div class="slides fade">
+            <img src="Images/newYearsConcert2020Conductor.jpg">
+          </div>
+
+          <div class="slides fade">
+            <img src="Images/musiciansNewYearsConcert2020.jpg">
+          </div>
+
+          <div class="slides fade">
+            <img src="Images/newYearsConcertAudience.jpg">
+          </div>
+
+          <div class="slides fade">
+            <img src="Images/newYearsConcertGuestsGroupPhoto.jpg">
+          </div>
+          <a class="left" onclick="slidesIncrease(-1)">&#10094;</a>
+          <a class="right" onclick="slidesIncrease(1)">&#10095;</a>
+        </div>
+        <br>
+        <script>
+          var slideNum = 1;
+          slideRn(slideNum);
+          function slidesIncrease(n) {
+            slideRn(slideNum += n);
+          }
+
+          function slideRn(n) {
+            var i;
+            var slides = document.getElementsByClassName("slides");
+            if (n > slides.length) {slideNum = 1}
+            if (n < 1) {slideNum = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slides[slideNum-1].style.display = "block";
+          }
+        </script>
+    </div>
+    <p id="desc2">Distinguished young conductor, Daye Lin was born in 1980 in Shandong Province, China. He has studied conducting under tutelage of Prof. Xu Xin at the Central Conservatory of Music in Beijing, Prof. Zhang Guoyong at the Shanghai Conservatory of Music, at the Hochschule für Musik Hanns Eisler in Berlin under the guidance of Prof. Christian Ehwald and obtained the Konzertexam certificate in Germany.  Highlights of 2017/18 season include his appearance at the Filarmonica Artura Toscanini, Nürnberg Symphony Orchestra, Seattle Symphony Orchestra and the Orquesta Filarmónica de la UNAM in Mexico and SZSO Belt & Road middle east Europe concert tour.  In 2019, once again invited by the Emilia Romagna Festival, Donizetti Festival and the state of Erlangen, Nuremburg to conduct SZSO at the Ljubljana Festival, Donizetti Festival, Festival delle Nazioni, Kammerphilharmonie dacapo München among others.
+  <br><br>
+  Since his gold medal win at the Thirteenth Van Cliburn International Piano Competition in 2009, the pianist Haochen Zhang has captivated audiences in the United States, Europe, and Asia with a unique combination of deep musical sensitivity, fearless imagination, and spectacular virtuosity. In 2017, Haochen received the prestigious Avery Fisher Career Grant, which recognizes talented musicians with the potential for a major career in music.   Haochen is a graduate of the Curtis Institute of Music in Philadelphia where he studied under Gary Graffman. He has also been studying periodically with Andreas Haefliger in Vienna. He was previously trained at the Shanghai Conservatory of Music and the Shenzhen Arts School, where he was admitted in 2001 at the age of 11 to study with Professor Dan Zhaoyi.
+  <br><br>
+  Other distinguished musicians include George Gao (erhu musician), Zhang Qiang (pipa), Zhang Qianyuan (suona).</p>
+  <div id="calendardiv">
+    <h5>Events Calendar</h5>
+    <iframe id="eventsCalendar" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffd500&amp;ctz=America%2FToronto&amp;src=cXM1a3RhbzlwYXVqYjBmamxkbDdtYnRwZjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4uY2FuYWRpYW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23E4C441&amp;color=%230B8043&amp;showTitle=1&amp;showDate=1&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=1&amp;hl=en_GB&amp;title=CCCDA%20Events" bgcolor=%23ccccff&amp; style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  </div>
+  <center><a id="pasteventsBtn" href="pastevents.html">View Past Events</a></center>
+  <div id="footer">
+    <hr>
+    <div id="footerLogoDiv">
+      <a href="index.html">
+        <img src="Images/CCCDAlogo.png">
+      </a>
+      <div id="mc_embed_signup">
+        <form action="https://ocdsb.us2.list-manage.com/subscribe/post?u=3c41640258b3b732f1452a14e&amp;id=53252c0114" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL">Subscribe</label>
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_3c41640258b3b732f1452a14e_53252c0114" tabindex="-1" value=""></div>
+         </form>
+      </div>
+    </div>
+      <!--<p>Culture in Art.</p>-->
+    <div id="footer2">
+      <div class="footerDiv">
+        <h3>Explore</h3>
+        <p><a href="index.html">Home</a></p>&nbsp;&#8226;
+        <p><a href="events.html">Events</a></p>&nbsp;&#8226;
+        <p><a href="education.html">Education</a></p>&nbsp;&#8226;
+        <p><a href="about.html">About</a></p>&nbsp;&#8226;
+        <p><a href="contact.html">Contact Us</a></p>
+      </div>
+      <div class="footerDiv">
+        <h3>Follow</h3>
+        <p><a href="https://twitter.com/cccda_ca?lang=en">Twitter</a></p>&nbsp;&#8226;
+        <p><a href="https://www.facebook.com/Canada-China-Cultural-Development-Association-364911953578051/about/">Facebook</a></p>&nbsp;&#8226;
+        <p><a href="https://www.youtube.com/channel/UCcUF1BexqaJodTvNv5hy8BQ/featured">YouTube</a></p>&nbsp;&#8226;
+        <p><a href="https://ca.linkedin.com/in/rudy-gao-75435455?trk=public_profile_browsemap_profile-result-card_result-card_full-click">LinkedIn</a></p>
+      </div>
+    </div>
+    <div onclick="backToTop()" id="backToTopButton">
+      <img id="backToTopOutline" src="Images/backToTopOutline.png">
+      <img id="backToTopFill" src="Images/backToTopFill.png">
+    </div>
+    <script>
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  </div>
+</body>
+</html>

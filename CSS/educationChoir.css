@@ -1,0 +1,777 @@
+@font-face {
+  font-family: ptsans;
+  src: url(../Fonts/ptsans/PT_Sans-Web-Regular.ttf);
+}
+@font-face {
+  font-family: bodon;
+  src: url(../Fonts/BodoniFLF/BodoniflfRoman-vmAD.ttf);
+}
+@font-face {
+  font-family: rafelya;
+  src: url(../Fonts/Rafelya-carrotin/RafelyaCarrotin-3zwKp.ttf);
+}
+@font-face {
+  font-family: iconmoon;
+  src: url(../Fonts/iconmoon/iconmoon.ttf);
+}
+*{
+  cursor: url(../Images/cursor.png) 20 15, default;
+}
+body {
+  background-color: #08090C;
+  width:100vw;
+  height:100vh;
+  margin: 0;
+  padding: 0;
+  display:unset;
+  overflow-x:hidden;
+}
+a {
+  cursor:url(../Images/cursor.png) 20 15, default;
+}
+#windowSizeAlert {
+  position:fixed;
+  background-color:#ffd500;
+  width:100vw;
+  height:100vh;
+  z-index:10000;
+  display:none;
+  overflow:scroll;
+}
+  #windowSizeAlert h5 {
+    position:relative;
+    font-family:ptsans;
+    font-size:40px;
+    color:#08090C;
+    padding:10px;
+  }
+  #windowSizeAlert button {
+    position:relative;
+    display:none;
+    background-color:#08090C;
+    color:#ffd500;
+    font-family:ptsans;
+    font-size:15px;
+    border:none;
+    padding:10px;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    margin-bottom:30px;
+  }
+  #windowSizeAlert button:hover {
+    color:#08090C;
+    background-color:#ffd500;
+    font-family:ptsans;
+    font-size:15px;
+    border:none;
+    padding:10px;
+  }
+.pageSection {
+  position:absolute;
+  margin-top:-15vh;
+}
+#header {
+  background-color: #08090C;
+  position: fixed;
+  z-index: 110;
+  left:0;
+  right:0;
+  top:0;
+  width:100vw;
+  height:15vh;
+}
+  #headerCompanyLogo {
+    position:relative;
+  }
+  #logoRed, #logoWhiteTop, #logoWhite, #logoGold {
+    width:8vh;
+    position:absolute;
+    top:4vh;
+    left:4vh;
+    opacity:1;
+  }
+  #headerCompanyName {
+    position: absolute;
+    font-size: 2.5vh;
+    color: white;
+    font-family: ptsans;
+    top:6vh;
+    left:16vh;
+    transition: .5s linear;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+  }
+    #headerCompanyName:hover {
+      color: #ffd500;
+      transition: .5s linear;
+      -webkit-transition: all .5s linear;
+      -moz-transition: all .5s linear;
+      -o-transition: all .5s linear;
+      -ms-transition: all .5s linear;
+    }
+    #headerCompanyName>span {
+      display: inline;
+      margin-left:-0.6vh;
+    }
+    #headerCompanyName>span:after {
+      width: 0px;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: bottom;
+      transition: .5s linear;
+      -webkit-transition: all .5s linear;
+      -moz-transition: all .5s linear;
+      -o-transition: all .5s linear;
+      -ms-transition: all .5s linear;
+    }
+    #headerCompanyName>span:nth-child(1):after {
+      content: 'anada-';
+      color: white;
+    }
+    #headerCompanyName>span:nth-child(2):after {
+      content: 'hina ';
+      color: white;
+    }
+    #headerCompanyName>span:nth-child(3):after {
+      content: 'ultural ';
+      color: white;
+    }
+    #headerCompanyName>span:nth-child(4):after {
+      content: 'evelopment ';
+      color: white;
+    }
+    #headerCompanyName>span:nth-child(5):after {
+      content: 'ssociation ';
+      color: white;
+    }
+    #headerCompanyName:hover span:nth-child(1):after {
+      width: 7.9vh;
+    }
+    #headerCompanyName:hover span:nth-child(2):after {
+      width: 6vh;
+    }
+    #headerCompanyName:hover span:nth-child(3):after {
+      width: 8.5vh;
+    }
+    #headerCompanyName:hover span:nth-child(4):after {
+      width: 14vh;
+    }
+    #headerCompanyName:hover span:nth-child(5):after {
+      width: 20vh;
+    }
+  #headerHome {
+    position:absolute;
+    font-size: 2.5vh;
+    color: white;
+    font-family: ptsans;
+    top:6vh;
+    right:75vh;
+    transition: .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+  }
+    #headerHome:hover {
+      color:#ffd500;
+    }
+  #headerAboutdropdown {
+    position:absolute;
+    top:6vh;
+    right:19vh;
+    width:15vh;
+  }
+    #headerAbout {
+      position:relative;
+      font-size: 2.5vh;
+      padding-left:1.5vh;
+      color: white;
+      font-family: ptsans;
+      transition: .3s linear;
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      -ms-transition: all .3s linear;
+      background: none;
+      border: none;
+      margin-bottom: 3vh;
+    }
+    #headerAboutdropdown a, #headerEventsdropdown a {
+      text-decoration:none;
+      border:none;
+    }
+    #headerAboutContent div{
+      color: white;
+      font-size:2.5vh;
+      font-family: ptsans;
+      margin-bottom: 2vh;
+      position:relative;
+      padding-left:1.5vh;
+    }
+    #headerAboutContent a{
+      color: white;
+      font-family: ptsans;
+      text-decoration: none;
+      transition: all .3s linear;
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      -ms-transition: all .3s linear;
+    }
+    #headerAboutContent a:hover{
+      color: #ffd500;
+      transition: all .3s linear;
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      -ms-transition: all .3s linear;
+    }
+    #headerAboutContent {
+      background-color: #08090C;
+      width:18vh;
+      height:20vh;
+      display:none;
+      white-space: nowrap;
+    }
+    #headerEducationdropdown {
+      position:absolute;
+      top:6vh;
+      right:37vh;
+      width:15vh;
+    }
+      #headerEducation {
+        position:relative;
+        font-size: 2.5vh;
+        padding-left:1.5vh;
+        color: white;
+        font-family: ptsans;
+        transition: .3s linear;
+        -webkit-transition: all .3s linear;
+        -moz-transition: all .3s linear;
+        -o-transition: all .3s linear;
+        -ms-transition: all .3s linear;
+        background: none;
+        border: none;
+        margin-bottom: 3vh;
+      }
+      #headerEducationdropdown a {
+        text-decoration:none;
+        border:none;
+      }
+      #headerEducationContent div{
+        color: white;
+        font-size:2.5vh;
+        font-family: ptsans;
+        margin-bottom: 2vh;
+        position:relative;
+        padding-left:1.5vh;
+      }
+      #headerEducationContent a{
+        color: white;
+        font-family: ptsans;
+        text-decoration: none;
+        transition: all .3s linear;
+        -webkit-transition: all .3s linear;
+        -moz-transition: all .3s linear;
+        -o-transition: all .3s linear;
+        -ms-transition: all .3s linear;
+      }
+      #headerEducationContent a:hover{
+        color: #ffd500;
+        transition: all .3s linear;
+        -webkit-transition: all .3s linear;
+        -moz-transition: all .3s linear;
+        -o-transition: all .3s linear;
+        -ms-transition: all .3s linear;
+      }
+      #headerEducationContent {
+        background-color: #08090C;
+        width:25vh;
+        height:20.5vh;
+        display:none;
+        white-space: nowrap;
+      }
+  #headerContactUs {
+    position:absolute;
+    font-size: 2.5vh;
+    color: white;
+    font-family: ptsans;
+    top:6vh;
+    right:8vh;
+    transition: .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+  }
+  #headerEventsdropdown {
+    position:absolute;
+    top:6vh;
+    right:52vh;
+    width:15vh;
+  }
+    #headerEvents {
+      position:relative;
+      font-size: 2.5vh;
+      padding-left:1.5vh;
+      color: white;
+      font-family: ptsans;
+      transition: .3s linear;
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      -ms-transition: all .3s linear;
+      background: none;
+      border: none;
+      margin-bottom: 3vh;
+    }
+    #headerEventsContent div{
+      color: white;
+      font-size:2.5vh;
+      font-family: ptsans;
+      margin-bottom: 2vh;
+      position:relative;
+      padding-left:1.5vh;
+    }
+    #headerEventsContent a{
+      color: white;
+      font-family: ptsans;
+      text-decoration: none;
+      transition: all .3s linear;
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      -ms-transition: all .3s linear;
+    }
+    #headerEventsContent a:hover{
+      color: #ffd500;
+      transition: all .3s linear;
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      -ms-transition: all .3s linear;
+    }
+    #headerEventsContent {
+      background-color: #08090C;
+      width:16vh;
+      height:9.6vh;
+      display:none;
+      white-space: nowrap;
+    }
+    #headerContactUs {
+      position:absolute;
+      font-size: 2.5vh;
+      color: white;
+      font-family: ptsans;
+      top:6vh;
+      right:8vh;
+      transition: .3s linear;
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      -ms-transition: all .3s linear;
+    }
+  #headerAbout:hover, #headerEducation:hover, #headerEvents:hover, #headerContactUs:hover {
+    color: #ffd500;
+    transition: .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    border:none;
+  }
+hr {
+  position:relative;
+  width:90vw;
+  border-top: solid 2px white;
+  border-bottom: none;
+}
+#choirIntro {
+  position:relative;
+  height:auto;
+  width:100vw;
+  overflow:hidden;
+  display:block;
+  margin-bottom:0;
+}
+  #title {
+    position:relative;
+    width:auto;
+    margin-bottom:0;
+    height:auto;
+  }
+  #choirIntroTitle{
+    position:relative;
+    margin-top:25vw;
+    color:white;
+    font-size:5vw;
+    font-family: rafelya;
+    font-weight:bold;
+    margin-bottom:0;
+    margin-left:25vw;
+    margin-right:15vw;
+    transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+  }
+  #choirIntroSubtitle{
+    position:absolute;
+    top:20vw;
+    left:25vw;
+    margin-bottom:0;
+    color:white;
+    font-size:1vw;
+    font-family: ptsans;
+    font-weight:bold;
+    padding:1vw;
+    border: solid 2px white;
+    border-radius:25px;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+  }
+  #choirIntroSubtitle:hover {
+    background-color:#ffd500;
+    color:#08090c;
+  }
+  #choirIntro a {
+    text-decoration:none;
+  }
+#choir1 {
+  margin-top:5vw;
+  position:relative;
+}
+  #choir1 p {
+    background-color:#1c2225;
+    border-radius:25px;
+    color:white;
+    font-family:ptsans;
+    font-size:1.5vw;
+    width:50vw;
+    height:auto;
+    padding:2vw;
+    margin-left:25vw;
+  }
+#choir2 {
+  position:relative;
+  width:100vw;
+  height:auto;
+  margin-left:0;
+  margin-top:5vw;
+}
+#choir3 {
+  position:relative;
+  margin-top:5vw;
+  margin-bottom:5vw;
+}
+  #choir3 p {
+    position:relative;
+    color:white;
+    font-family:ptsans;
+    font-size:1.5vw;
+    margin-left:5vw;
+    margin-right:5vw;
+  }
+  #choir3 img {
+    border-radius:25px;
+    position:relative;
+    vertical-align:top;
+    object-fit:cover;
+    overflow:hidden;
+    margin-bottom:1.5vw;
+    filter: brightness(0.5);
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+  }
+  #choir3 img:hover {
+    filter: brightness(1);
+    overflow:hidden;
+  }
+  #h1 {
+    margin-top:5vw;
+    width:50vw;
+    left:25vw;
+    height:25vw;
+    clear:right;
+    display:block;
+  }
+  #h2 {
+    width:40vw;
+    left:18vw;
+    height:30vw;
+    display:inline-block;
+  }
+  #h3 {
+    width:25vw;
+    height:20vw;
+    left:19vw;
+    display:inline-block;
+  }
+#choir4 {
+  position:relative;
+}
+  #choir4 h3 {
+    position:relative;
+    margin-left:5vw;
+    display:inline-block;
+    border-right:solid white 2px;
+    font-family:bodon;
+    font-size:5vw;
+    width:20vw;
+    color:white;
+    padding-right:2vw;
+  }
+  .mastersdiv {
+    position:relative;
+    margin-left:5vw;
+    font-size:1.5vw;
+    display:inline-block;
+    font-family:ptsans;
+    width:20vw;
+    color:white;
+    vertical-align:top;
+    padding:2vw;
+    background-color:#1c2225;
+    border-radius:25px;
+    margin-bottom:5vw;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+  }
+  .mastersdiv:hover {
+    background-color:#2c353A;
+  }
+  .mastersdiv h5{
+    font-size:3vw;
+    margin-bottom:0;
+    margin-top:0;
+  }
+  .mastersdiv h6{
+    font-style:italic;
+    color:#C0C0C0;
+    font-size:2vw;
+    margin-top:0;
+    margin-bottom:0;
+  }
+#choir5 {
+  position:relative;
+}
+  #choir5 h2 {
+    position:relative;
+    font-family:ptsans;
+    font-size:4vw;
+    color:white;
+    text-align:center;
+  }
+  #choir5 h3 {
+    position:relative;
+    font-family:ptsans;
+    font-size:2vw;
+    color:white;
+    margin-left:5vw;
+    background-color:#1c2225;
+    width:4vw;
+    height:auto;
+    padding:1vw;
+    border-radius:25px;
+  }
+  #choir5 table {
+    margin-bottom:5vw;
+    position:relative;
+    text-align:left;
+    width:90vw;
+    height:auto;
+    color:white;
+    font-family:ptsans;
+    font-size:1.5vw;
+    border-collapse:collapse;
+  }
+  #choir5 td {
+    padding:1vw;
+    border-bottom: 1px white solid;
+  }
+  #choir5 th {
+    padding-right:2vw;
+    font-style:italic;
+    font-weight:bold;
+    border-bottom: 2px white solid;
+  }
+  #backbtn {
+    position:fixed;
+    left:2vw;
+    text-decoration:none;
+    top:20vh;
+    z-index:100;
+    color:white;
+    font-size:2vw;
+    width:5vw;
+    border-top-left-radius:200px;
+    border-bottom-left-radius:200px;
+    padding-left:1vw;
+    font-family:ptsans;
+    border: white 2px solid;
+    background-color:none;
+    opacity:0.5;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+  }
+    #backbtn:hover {
+      color:#08090C;
+      border: #08090c 2px solid;
+      background-color:#ffd500;
+      opacity:1;
+    }
+#footer {
+  display:block;
+  background-color:#08090C;
+  width:100vw;
+  height:20vw;
+  color:white;
+  position:absolute;
+  z-index:101;
+  }
+    #backToTopButton {
+    position:absolute;
+    right:5vw;
+    top:10vh;
+    }
+    #backToTopButton img {
+      position:absolute;
+      top:0;
+      right:0;
+      width:8vw;
+      height:auto;
+    }
+    #backToTopFill {
+      opacity:0;
+      transition: all .3s linear;
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      -ms-transition: all .3s linear;
+    }
+    #backToTopFill:hover {
+      opacity:1;
+      transition: all .3s linear;
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      -ms-transition: all .3s linear;
+    }
+    #footerLogoDiv {
+    position:absolute;
+    left:5vw;
+    top:5vh;
+    }
+    #footerLogoDiv a img{
+      width:5vw;
+      height:auto;
+    }
+    #footerLogoDiv p {
+      font-family: rafelya;
+      font-size: 1.5vw;
+    }
+    .footerDiv {
+      position:relative;
+    }
+  #footer2 {
+  position:absolute;
+  left:45vw;
+  top:5vh;
+  }
+    .footerDiv a, .footerDiv p, .footerDiv h3 {
+      color:white;
+      text-decoration:none;
+      font-family:ptsans;
+      transition: all .3s linear;
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      -ms-transition: all .3s linear;
+      font-size: 1.3vw;
+      display: inline;
+    }
+    .footerDiv h3 {
+      font-size: 1.5vw;
+      display:block;
+    }
+    .footerDiv a:hover {
+      color:#ffd500;
+      font-family:ptsans;
+      transition: all .3s linear;
+      -webkit-transition: all .3s linear;
+      -moz-transition: all .3s linear;
+      -o-transition: all .3s linear;
+      -ms-transition: all .3s linear;
+    }
+    #mc_embed_signup {
+      position:relative;
+    }
+    #mc_embed_signup_scroll label{
+      position:relative;
+      color:white;
+      font-family:ptsans;
+      margin-top:10px;
+      font-size:2vw;
+      display:block;
+      margin-bottom:10px;
+    }
+    #mce-EMAIL {
+      position:relative;
+      display:inline-block;
+      font-family:ptsans;
+      font-size:1vw;
+      padding-left:2px;
+      padding-right:2px;
+      width:20vw;
+      color: #ffd500;
+      height:2vw;
+      background-color: #08090C;
+      border: solid 2px #ffd500;
+        display:inline-block;
+    }
+    ::placeholder {
+      color:#ffd500;
+      padding-left:2px;
+    }
+    #mc-embedded-subscribe {
+      background-color:#ffd500;
+      color: #08090C;
+      font-family:ptsans;
+      font-size:1vw;
+      width:6vw;
+      height:calc(2vw + 6px);
+      display:inline-block;
+      border:none;
+      transition: all .2s linear;
+      -webkit-transition: all .2s linear;
+      -moz-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      -ms-transition: all .2s linear;
+    }
+    #mc-embedded-subscribe:hover {
+      background-color:#08090C;
+      color: #ffd500;
+      transition: all .2s linear;
+      -webkit-transition: all .2s linear;
+      -moz-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      -ms-transition: all .2s linear;
+    }
